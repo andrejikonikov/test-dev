@@ -1,0 +1,171 @@
+.brick {
+    height: 3px;
+    width: 24px;
+    border-radius: 2px;
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    transition: all .35s ease-in-out;
+}
+
+.centered {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.pseudo {
+    content: "";
+}
+
+.header {
+    $mainColor: #d3135a;
+    $grey: #4d4d4d;
+
+    .container {
+        // padding-top: 50px;
+    }
+
+    &--main {
+        border: 1px solid pink;
+        background-color: $mainColor;
+        height: 80px;
+
+        h1 {
+            margin: 0;
+            height: 100%;
+            display: inline-block;
+            margin-right: 40px;
+            overflow: hidden;
+            line-height: 56px;
+            color: #ffc2dd;
+            display: table-cell;
+        }
+    }
+
+    &__toggler {
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        top: 20px;
+        right: 10px;
+
+        .brick {
+            @extend .centered;
+
+            &::before, &::after {
+                @extend .pseudo;
+                @extend .brick;
+            }
+
+            &::before {
+                top: -15px;
+            }
+
+            &::after {
+                top: 10px;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__navigation {
+        background-color: $mainColor;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+
+        ul {
+            display: none;
+
+            li {
+                min-height: 30px;
+
+                a {
+                    padding: 10px;
+                    display: block;
+                    font-size: 1.125em;
+                    line-height: 1.11111111em;
+                    color: #fff;
+
+                    &:hover, &:active, &:focus {
+                        color: $grey;
+                    }
+                }
+            }
+        }
+
+        &.open {
+            ul {
+                display: block;
+            }
+
+            .header__toggler {
+                .brick {
+                    background: transparent;
+
+                    &::before, &::after {
+                        background-color: #fff;
+                    }
+
+                    &::before {
+                        transform: rotate(45deg) translateY(6px) translateX(5px);
+
+                    }
+                    &::after {
+                        transform: rotate(-45deg) translateY(-6px) translateX(6px);
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1010px) {
+
+        &--main {
+            height: 117px;
+        }
+
+        &__toggler {
+            display: none;
+        }
+
+        .container {
+            display: table;
+        }
+
+        h1 {
+            width: 50%;
+            display: table-cell;
+            vertical-align: bottom;
+            font-size: 46px;
+        }
+
+        &__navigation {
+            display: block;
+            width: 45%;
+            display: table-cell;
+            vertical-align: bottom;
+            position: relative;
+            top: 0;
+
+            ul {
+                text-align: center;
+                display: table-cell;
+            }
+
+            li {
+                display: inline-block;
+                position: relative;
+            }
+        }
+
+
+    }
+}
