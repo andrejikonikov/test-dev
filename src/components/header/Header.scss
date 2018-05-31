@@ -24,24 +24,42 @@
     $mainColor: #d3135a;
     $grey: #4d4d4d;
 
-    .container {
-        // padding-top: 50px;
+    &--main {
+        background-color: $mainColor;
     }
 
-    &--main {
-        border: 1px solid pink;
-        background-color: $mainColor;
-        height: 80px;
+    .container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    &__top {
+        text-align: right;
+
+        li {
+            display: inline-block;
+            margin: 0 6px;
+            height: 14px;
+
+            a {
+                font-size: 12px;
+                line-height: 14px;
+                height: 14px;
+                display: block;
+                color: #000;
+            }
+        }
+    }
+
+    &__title {
+        display: inline-block;
+        overflow: hidden;
+        margin-right: 40px;
 
         h1 {
             margin: 0;
-            height: 100%;
-            display: inline-block;
-            margin-right: 40px;
-            overflow: hidden;
             line-height: 56px;
             color: #ffc2dd;
-            display: table-cell;
         }
     }
 
@@ -49,7 +67,7 @@
         width: 40px;
         height: 40px;
         position: fixed;
-        top: 20px;
+        top: 30px;
         right: 10px;
 
         .brick {
@@ -132,40 +150,76 @@
             height: 117px;
         }
 
+        &__top {
+            caption-side: top;
+            display: table-caption;
+
+            li {
+                margin: 0 6px;
+                height: auto;
+
+                a {
+                    font-size: 12px;
+                    line-height: 14px;
+                    height: auto;
+                    display: block;
+                    color: #000;
+                    padding: 20px 0 10px 0;
+                }
+            }
+        }
+
+        &__bottom {
+            display: table-row-group;
+
+            &--row {
+                display: table-row;
+            }
+        }
+
         &__toggler {
             display: none;
         }
 
         .container {
             display: table;
+            height: 73px;
+        }
+
+        &__title, &__navigation {
+            display: table-cell;
         }
 
         h1 {
             width: 50%;
-            display: table-cell;
             vertical-align: bottom;
             font-size: 46px;
+            display: block;
         }
 
         &__navigation {
-            display: block;
+            background: transparent;
             width: 45%;
-            display: table-cell;
-            vertical-align: bottom;
-            position: relative;
             top: 0;
+            position: relative;
+            vertical-align: bottom;
+
+            .wrapper {
+                display: block;
+                height: 73px;
+                max-height: 73px;
+            }
 
             ul {
                 text-align: center;
-                display: table-cell;
+                display: block;
             }
 
             li {
                 display: inline-block;
                 position: relative;
+                margin-top: 18px;
             }
         }
-
-
     }
 }

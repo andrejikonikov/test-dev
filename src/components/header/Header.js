@@ -30,31 +30,69 @@ class Header extends Component {
         let subNavClass = this.state.subOpen ? "dropdown open" : "dropdown";
 
         return (
+
             <header className="header header--main">
                 <div className="container">
-                    <h1 className="header__title">The Site</h1>
-
-                    <nav className={navClass}>
-                        <div className="header__toggler" onClick={this.menuToggle}>
-                            <span className="brick"></span>
-                        </div>
+                    <nav className="header__top">
                         <ul>
-                            <li>
-                                <a href="#" onClick={this.subMenuToggle}>menu link</a>
-                                <ul className={subNavClass}>
-                                    <li><a href="#">Lorem ipsum dolor</a></li>
-                                    <li><a href="#">sit amet, consectetur</a></li>
-                                    <li><a href="#">adipisicing elit</a></li>
-                                </ul>
-                            </li>
                             <li><a href="#">menu link</a></li>
                             <li><a href="#">menu link</a></li>
                             <li><a href="#">menu link</a></li>
                         </ul>
                     </nav>
+
+                    <div className="header__bottom">
+                        <div className="header__bottom--row">
+
+                            <div className="header__title">
+                                <h1>The Site</h1>
+                            </div>
+
+                            <nav className={navClass}>
+                                <div className="wrapper">
+                                <div className="header__toggler" onClick={this.menuToggle}>
+                                    <span className="brick"></span>
+                                </div>
+
+                                <ul>
+                                    <li>
+                                        <a href="#" onClick={this.subMenuToggle}>menu link</a>
+                                        <ul className={subNavClass}>
+                                            <li><a href="#">Lorem ipsum dolor</a></li>
+                                            <li><a href="#">sit amet, consectetur</a></li>
+                                            <li><a href="#">adipisicing elit</a></li>
+                                        </ul>
+
+                                    </li>
+                                    <li><a href="#">menu link</a></li>
+                                    <li><a href="#">menu link</a></li>
+                                    <li><a href="#">menu link</a></li>
+                                </ul>
+                                </div>
+                            </nav>
+                        </div>
+
+
+
+                    </div>
+
+
                 </div>
             </header>
+
+
+
+
+
+
         );
+
+
+
+
+
+
+
     }
 }
 
