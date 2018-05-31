@@ -20,10 +20,6 @@
 .header--main {
   background-color: #d3135a; }
 
-.header .container {
-  padding-top: 0;
-  padding-bottom: 0; }
-
 .header__top {
   text-align: right; }
   .header__top li {

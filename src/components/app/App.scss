@@ -5,5 +5,83 @@
     border: 1px solid black;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 10px;
+    overflow: auto;
+}
+
+article {
+    background: #fff;
     padding: 10px;
+    margin-top: 10px;
+
+    ul {
+        li {
+            height: 30px;
+            border-bottom: 1px solid #cccccc;
+
+            &:last-of-type {
+                border: 0;
+            }
+
+            a {
+                color: #0071bc;
+                display: block;
+                padding: 5px;
+                padding-left: 0;
+            }
+        }
+    }
+
+    @media (min-width: 1010px) {
+        padding: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+}
+
+aside article {
+    background: transparent;
+    padding: 0;
+
+    h3 {
+        border-bottom: 3px solid #000;
+        padding-bottom: 10px;
+    }
+
+    p {
+        color: #4d4d4d;
+        margin-bottom: 30px;
+    }
+}
+
+section.highlights {
+    background: #ccc;
+    color: #4d4d4d;
+}
+
+.layout {
+    &__column {
+        float: left;
+        width: 100%;
+        border: 1px solid pink;
+
+        @media (min-width: 1010px) {
+
+            &--third {
+                width: 33.333%;
+            }
+
+            &--thirdReduced {
+                width: 30%;
+            }
+
+            &--twoHrirds {
+                width: 70%;
+            }
+
+            &--half {
+                width: 50%;
+            }
+        }
+    }
 }
