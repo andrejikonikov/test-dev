@@ -1,0 +1,30 @@
+form, input, textarea {
+  border: 1px solid #898989;
+  padding: 10px; }
+  form button, input button, textarea button {
+    background-color: #d3135a;
+    color: #fff;
+    border: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 12px 26px; }
+    form button:disabled, input button:disabled, textarea button:disabled {
+      opacity: 0.5; }
+  form label, input label, textarea label {
+    margin-bottom: 5px;
+    display: block; }
+  form input, input input, textarea input {
+    height: 30px; }
+  form input, form textarea, input input, input textarea, textarea input, textarea textarea {
+    width: 100%;
+    margin-bottom: 22px; }
+  form textarea, input textarea, textarea textarea {
+    resize: none;
+    overflow: auto; }
+  form .formErrors, input .formErrors, textarea .formErrors {
+    color: #d3135a; }
+    form .formErrors p, input .formErrors p, textarea .formErrors p {
+      margin-top: 0; }
+  @media (min-width: 1010px) {
+    form, input, textarea {
+      padding: 20px; } }

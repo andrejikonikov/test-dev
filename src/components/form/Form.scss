@@ -1,0 +1,48 @@
+form, input, textarea {
+    border: 1px solid #898989;
+    padding: 10px;
+
+    button {
+        background-color: #d3135a;
+        color: #fff;
+        border: 0;
+        font-size: 15px;
+        text-transform: uppercase;
+        padding: 12px 26px;
+
+        &:disabled {
+            opacity: 0.5;
+        }
+    }
+
+    label {
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    input {
+        height: 30px;
+    }
+
+    input, textarea {
+        width: 100%;
+        margin-bottom: 22px;
+    }
+
+    textarea {
+        resize: none;
+        overflow: auto;
+    }
+
+    .formErrors {
+        color: #d3135a;
+
+        p {
+            margin-top: 0;
+        }
+    }
+
+    @media (min-width: 1010px) {
+        padding: 20px;
+    }
+}

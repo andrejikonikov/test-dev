@@ -41,6 +41,10 @@ aside article {
 section.highlights {
   background: #ccc;
   color: #4d4d4d; }
+  section.highlights p {
+    margin-left: 20px; }
+    section.highlights p:last-of-type {
+      margin-right: 20px; }
 
 .layout__column {
   float: left;
