@@ -74,12 +74,18 @@
             }
 
             &::before {
-                top: -15px;
+                // top: -15px;
+                top: -12px;
             }
 
             &::after {
-                top: 10px;
+                // top: 10px;
+                top: 12px;
             }
+        }
+
+        &--primary {
+            position: absolute;
         }
 
         &:hover {
@@ -129,6 +135,7 @@
 
                     &::before {
                         transform: rotate(45deg) translateY(6px) translateX(5px);
+                            transform: rotate(45deg) translateY(3px) translateX(3px);
 
                     }
                     &::after {

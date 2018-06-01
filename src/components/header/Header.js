@@ -9,7 +9,8 @@ class Header extends Component {
         super(props);
         this.state = {
             open: false,
-            subOpen: false
+            subOpen: false,
+            top: 0
         };
     }
 
@@ -25,9 +26,26 @@ class Header extends Component {
         }));
     }
 
+    componentDidMount = () => {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    componentWillUnmount = () => {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll = (event) => {
+        let scrollTop = event.pageY;
+
+        this.setState({
+            top: scrollTop
+        });
+    }
+
     render() {
         let navClass = this.state.open ? "header__navigation open" : "header__navigation";
         let subNavClass = this.state.subOpen ? "dropdown open" : "dropdown";
+        let togglerClass = this.state.top >= 60 ? "header__toggler header__toggler--primary" : "header__toggler";
 
         return (
 
@@ -50,7 +68,7 @@ class Header extends Component {
 
                             <nav className={navClass}>
                                 <div className="wrapper">
-                                <div className="header__toggler" onClick={this.menuToggle}>
+                                <div className={togglerClass} onClick={this.menuToggle}>
                                     <span className="brick"></span>
                                 </div>
 
@@ -62,7 +80,6 @@ class Header extends Component {
                                             <li><a href="#">sit amet, consectetur</a></li>
                                             <li><a href="#">adipisicing elit</a></li>
                                         </ul>
-
                                     </li>
                                     <li><a href="#">menu link</a></li>
                                     <li><a href="#">menu link</a></li>
@@ -71,28 +88,10 @@ class Header extends Component {
                                 </div>
                             </nav>
                         </div>
-
-
-
                     </div>
-
-
                 </div>
             </header>
-
-
-
-
-
-
         );
-
-
-
-
-
-
-
     }
 }
 

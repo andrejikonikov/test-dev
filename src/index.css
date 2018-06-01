@@ -1,7 +1,19 @@
+@font-face {
+    font-family: 'trebuchet';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/TrebuchetMS.eot'); /* IE9 Compat Modes */
+    src: local('trebuchet'), local('trebuchet'),
+        url('./fonts/TrebuchetMS.woff2') format('woff2'), /* Super Modern Browsers */
+        url('./fonts/TrebuchetMS.woff') format('woff'), /* Modern Browsers */
+        url('./fonts/TrebuchetMS.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('./fonts/TrebuchetMS.svg') format('svg'); /* Legacy iOS */
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'trebuchet', sans-serif;
     background: #e6e6e6;
 }
 
@@ -10,8 +22,9 @@ body {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 60px;
     line-height: 1.25em;
+    font-family: 'trebuchet', sans-serif;
 }
 
 h2 {
@@ -24,7 +37,7 @@ h3, h2 {
 }
 
 p {
-    font-size: 1em;
+    font-size: 14px;
     line-height: 1.25em;
 }
 

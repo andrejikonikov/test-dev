@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import logo from './../../logo.svg';
 
 import './App.css';
+import './Layout.css';
 
 import Header from './../header/Header';
 import CustomForm from './../form/Form';
+import Footer from './../footer/Footer';
 
 class App extends Component {
     render() {
@@ -23,13 +25,13 @@ class App extends Component {
                         </article>
 
                         <div className="layout__column layout__column--half">
-                            <article>
+                            <article className="restricted">
                                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                             </article>
                         </div>
 
                         <div className="layout__column layout__column--half">
-                            <article>
+                            <article className="restricted">
                                 <h3>Aenean ac diam  nec neque fringilla</h3>
 
                                 <ul>
@@ -62,6 +64,8 @@ class App extends Component {
                         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                     </div>
                 </section>
+
+                <Footer />
             </div>
         );
     }

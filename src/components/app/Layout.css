@@ -1,0 +1,12 @@
+.layout__column {
+  float: left;
+  width: 100%; }
+  @media (min-width: 1010px) {
+    .layout__column--third {
+      width: 33.333%; }
+    .layout__column--thirdReduced {
+      width: 30%; }
+    .layout__column--twoHrirds {
+      width: 70%; }
+    .layout__column--half {
+      width: 50%; } }

@@ -49,9 +49,11 @@
   top: 30px;
   right: 10px; }
   .header__toggler .brick::before {
-    top: -15px; }
+    top: -12px; }
   .header__toggler .brick::after {
-    top: 10px; }
+    top: 12px; }
+  .header__toggler--primary {
+    position: absolute; }
   .header__toggler:hover {
     cursor: pointer; }
 
@@ -80,7 +82,8 @@
     .header__navigation.open .header__toggler .brick::before, .header__navigation.open .header__toggler .brick::after {
       background-color: #fff; }
     .header__navigation.open .header__toggler .brick::before {
-      transform: rotate(45deg) translateY(6px) translateX(5px); }
+      transform: rotate(45deg) translateY(6px) translateX(5px);
+      transform: rotate(45deg) translateY(3px) translateX(3px); }
     .header__navigation.open .header__toggler .brick::after {
       transform: rotate(-45deg) translateY(-6px) translateX(6px); }
 

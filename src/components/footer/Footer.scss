@@ -1,0 +1,67 @@
+.foter {
+    $mean: 20px;
+    $half: 10px;
+    background-color: #666666;
+    color: #fff;
+    padding-top: $half;
+    padding-bottom: $half;
+
+    .container {
+        overflow: hidden;
+    }
+
+    ul {
+        margin-bottom: 25px;
+
+        li {
+            height: $mean;
+            border-right: 1px solid #fff;
+            display: inline-block;
+            padding-right: $half;
+            margin-right: $half;
+
+            a {
+                padding: 3px;
+                display: block;
+                font-size: 12px;
+                line-height: 14px;
+                color: #fff;
+            }
+
+            &:last-of-type {
+                border: 0;
+            }
+        }
+    }
+
+    p {
+        color: #b3b3b3;
+        font-size: 12px;
+        margin: 0;
+        height: 65px;
+        overflow: hidden;
+    }
+
+    &__title {
+        padding-left: $mean;
+        margin-top: 35px;
+        text-align: right;
+    }
+
+    @media (min-width: 1010px) {
+        padding-top: $mean;
+        padding-bottom: $mean;
+
+        p {
+            width: 80%;
+        }
+
+        &__title {
+            width: 20%;
+        }
+
+        p, &__title {
+            float: left;
+        }
+    }
+}

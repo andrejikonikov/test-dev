@@ -1,0 +1,43 @@
+.foter {
+  background-color: #666666;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .foter .container {
+    overflow: hidden; }
+  .foter ul {
+    margin-bottom: 25px; }
+    .foter ul li {
+      height: 20px;
+      border-right: 1px solid #fff;
+      display: inline-block;
+      padding-right: 10px;
+      margin-right: 10px; }
+      .foter ul li a {
+        padding: 3px;
+        display: block;
+        font-size: 12px;
+        line-height: 14px;
+        color: #fff; }
+      .foter ul li:last-of-type {
+        border: 0; }
+  .foter p {
+    color: #b3b3b3;
+    font-size: 12px;
+    margin: 0;
+    height: 65px;
+    overflow: hidden; }
+  .foter__title {
+    padding-left: 20px;
+    margin-top: 35px;
+    text-align: right; }
+  @media (min-width: 1010px) {
+    .foter {
+      padding-top: 20px;
+      padding-bottom: 20px; }
+      .foter p {
+        width: 80%; }
+      .foter__title {
+        width: 20%; }
+      .foter p, .foter__title {
+        float: left; } }

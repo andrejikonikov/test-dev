@@ -1,0 +1,25 @@
+.layout {
+    &__column {
+        float: left;
+        width: 100%;
+
+        @media (min-width: 1010px) {
+
+            &--third {
+                width: 33.333%;
+            }
+
+            &--thirdReduced {
+                width: 30%;
+            }
+
+            &--twoHrirds {
+                width: 70%;
+            }
+
+            &--half {
+                width: 50%;
+            }
+        }
+    }
+}
